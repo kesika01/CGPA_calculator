@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Number of Subjects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <img src="college.jpg" alt="College Image" class="background-image"> <!-- Background image -->
+        
+        <div class="content-container">
+            <h2>Welcome to GPA Calculator</h2>
+            
+            <div class="quotes-container">
+              <p class="quote">“Teachers can open the door, but you must enter it yourself.”</p>
+              <p class="quote">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”</p>
+              <p class="quote">“Education is the most powerful weapon you can use to change the world.” —B.B. King</p>
+          </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <h1>Enter Number of Subjects</h1>
+        <input type="number" id="numSubjects" min="1" max="20">
+        <button onclick="redirectToInputPage()">Next</button>
+    </div>
+
+    <script>
+        function redirectToInputPage() {
+            const numSubjects = document.getElementById('numSubjects').value;
+            localStorage.setItem('numSubjects', numSubjects); // Store number of subjects in localStorage
+            window.location.href = 'enterGrades.html'; // Redirect to the grades input page
+        }
+    </script>
+</body>
+</html>
